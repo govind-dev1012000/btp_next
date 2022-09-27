@@ -37,6 +37,6 @@ stages:
       - org: 'd19c1445trial'
         space: 'dev'
         apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
-        appName: 'btp100001010'
+        appName: 'btp1000010100'
         manifest: 'manifest.yml'
         credentialsId: 'auth'
