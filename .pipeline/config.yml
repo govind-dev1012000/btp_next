@@ -1,0 +1,40 @@
+---
+general:
+  buildTool: "npm"
+service:
+  buildToolVersion: "N14"
+stages:
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: true
+  Additional Unit Tests:
+    npmExecuteScripts: true
+    karmaExecuteTests: false
+  Acceptance:
+    cloudFoundryDeploy: true
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+    cfOrg: "d19c1445trial"
+    cfSpace: "dev"
+    cfAppName: "btp10100"
+    cfCredentialsId: "auth"
+    uiVeri5ExecuteTests: false
+  Compliance:
+    sonarExecuteScan: false
+  Release:
+    cloudFoundryDeploy: true
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+    cfOrg: "d19c1445trial"
+    cfSpace: "dev"
+    cfAppName: "btp10100"
+    cfCredentialsId: "auth"
+    tmsUpload: false
+steps:
+  artifactPrepareVersion:
+    versioningType: "cloud_noTag"
+  npmExecuteLint:
+    failOnError: false
+  npmExecuteScripts:
+    runScripts:
+    - "test"
+  cloudFoundryDeploy:
+    mtaDeployParameters: "-f --version-rule ALL"
