@@ -1,5 +1,4 @@
 applications:
-- name: btp101
-  path: app
+- name: btp10101
   route: random
   memory: 128M
