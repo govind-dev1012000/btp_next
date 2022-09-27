@@ -9,6 +9,7 @@ stages:
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
     cfOrg: "d19c1445trial"
     cfSpace: "dev"
+    cfAppName: "btp101010" 
     cfCredentialsId: "auth"
 
 steps:
@@ -19,4 +20,5 @@ steps:
     org: 'd19c1445trial'
     space: 'dev'
     credentialsId: 'auth'
+
 
