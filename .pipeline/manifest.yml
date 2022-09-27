@@ -1,4 +1,0 @@
-applications:
-  route: random
-  memory: 128M
-  buildpack: nodejs_buildpack
