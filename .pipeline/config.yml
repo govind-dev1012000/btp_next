@@ -33,10 +33,11 @@ stages:
 #        credentialId: 'mySystemCredentialsId'
 
   Release:
-    cfTargets:
-      - org: 'd19c1445trial'
-        space: 'dev'
-        apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
-        appName: 'btp1000010100'
-        manifest: 'manifest.yml'
-        credentialsId: 'auth'
+    productionDeployment:
+      cfTargets:
+        - org: 'd19c1445trial'
+          space: 'dev'
+          apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+          appName: 'btp1000010100'
+          manifest: 'manifest.yml'
+          credentialsId: 'auth'
