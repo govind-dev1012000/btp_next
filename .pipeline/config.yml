@@ -15,9 +15,8 @@ steps:
   mtaBuild:
     buildTarget: 'CF'
   cloudFoundryDeploy:
-    cloudFoundry:
-      apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
-      org: 'd19c1445trial'
-      space: 'dev'
-      credentialsId: 'auth'
+    apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+    org: 'd19c1445trial'
+    space: 'dev'
+    credentialsId: 'auth'
 
