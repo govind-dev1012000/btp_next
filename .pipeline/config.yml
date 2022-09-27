@@ -6,17 +6,12 @@ service:
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false
-    npmExecuteLint: true
+    npmExecuteLint: false
   Additional Unit Tests:
-    npmExecuteScripts: true
+    npmExecuteScripts: false
     karmaExecuteTests: false
   Acceptance:
-    cloudFoundryDeploy: true
-    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "d19c1445trial"
-    cfSpace: "dev"
-    cfAppName: "btp10100"
-    cfCredentialsId: "auth"
+    cloudFoundryDeploy: false
     uiVeri5ExecuteTests: false
   Compliance:
     sonarExecuteScan: false
@@ -31,10 +26,5 @@ stages:
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
-  npmExecuteLint:
-    failOnError: false
-  npmExecuteScripts:
-    runScripts:
-    - "test"
   cloudFoundryDeploy:
     mtaDeployParameters: "-f --version-rule ALL"
