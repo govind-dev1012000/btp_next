@@ -7,6 +7,20 @@
  * More information on getting started with Continuous Delivery can be found here: https://sap.github.io/jenkins-library/
  */
 
-library('piper-lib-os')
+@Library('piper-lib-os') _
 
-cloudFoundryDeploy script: this
+node(){
+  stage('Prepare')   {
+      deleteDir()
+      checkout scm
+      setupCommonPipelineEnvironment script:this
+  }
+
+  stage('Build')   {
+      mtaBuild script:this
+  }
+
+  stage('Deploy')   {
+      cloudFoundryDeploy script:this, deployTool:'mtaDeployPlugin'
+  }
+}
