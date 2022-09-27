@@ -23,13 +23,13 @@
 
 ---
 general:
-  buildTool: "npm"
+  # buildTool: "npm"
 service:
-  buildToolVersion: "N14"
+  # buildToolVersion: "N14"
 stages:
-  Build:
-    mavenExecuteStaticCodeChecks: false
-    npmExecuteLint: true
+  # Build:
+  #   mavenExecuteStaticCodeChecks: false
+  #   npmExecuteLint: true
   Additional Unit Tests:
     npmExecuteScripts: true
     karmaExecuteTests: false
@@ -50,6 +50,7 @@ stages:
     cfSpace: "dev"
     cfAppName: "btp10100"
     cfCredentialsId: "auth"
+    cfManifestVariablesFiles: "./manifest.yml"
 steps:
   # artifactPrepareVersion:
   #   versioningType: "cloud_noTag"
