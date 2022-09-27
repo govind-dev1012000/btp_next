@@ -1,18 +1,18 @@
----
-general:
-  buildTool: "npm"
-service:
-  buildToolVersion: "N14"
-stages:
-  Release:
-    cloudFoundryDeploy: true
-    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "d19c1445trial"
-    cfSpace: "dev"
-    cfAppName: "btp101010" 
-    cfCredentialsId: "auth"
+# ---
+# general:
+#   buildTool: "npm"
+# service:
+#   buildToolVersion: "N14"
+# stages:
+#   Release:
+#     cloudFoundryDeploy: true
+#     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+#     cfOrg: "d19c1445trial"
+#     cfSpace: "dev"
+#     cfAppName: "btp101010" 
+#     cfCredentialsId: "auth"
 
-steps:
+# steps:
   # mtaBuild:
   #   buildTarget: 'CF'
   # cloudFoundryDeploy:
@@ -21,4 +21,46 @@ steps:
   #   space: 'dev'
   #   credentialsId: 'auth'
 
+---
+general:
+  buildTool: "npm"
+service:
+  buildToolVersion: "N14"
+stages:
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: false
+  Additional Unit Tests:
+    npmExecuteScripts: true
+    karmaExecuteTests: false
+  Acceptance:
+    cloudFoundryDeploy: true
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+    cfOrg: "d19c1445trial"
+    cfSpace: "dev"
+    cfAppName: "btp10100"
+    cfCredentialsId: "auth"
+    uiVeri5ExecuteTests: false
+  Compliance:
+    sonarExecuteScan: false
+  Release:
+    cloudFoundryDeploy: true
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+    cfOrg: "d19c1445trial"
+    cfSpace: "dev"
+    cfAppName: "btp10100"
+    cfCredentialsId: "auth"
+    tmsUpload: false
+steps:
+  artifactPrepareVersion:
+    versioningType: "cloud_noTag"
+  npmExecuteScripts:
+    runScripts:
+    - "test"
+  cloudFoundryDeploy:
+    apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+    org: 'd19c1445trial'
+    space: 'dev'
+    credentialsId: 'auth'
+    mtaDeployParameters: "-f --version-rule ALL"
 
