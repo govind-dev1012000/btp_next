@@ -1,4 +1,0 @@
-applications:
-- name: btp10101
-  route: random
-  memory: 128M
