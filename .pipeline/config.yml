@@ -23,9 +23,9 @@
 
 ---
 general:
-  # buildTool: "npm"
+  buildTool: "npm"
 service:
-  # buildToolVersion: "N14"
+  buildToolVersion: "N14"
 stages:
   # Build:
   #   mavenExecuteStaticCodeChecks: false
