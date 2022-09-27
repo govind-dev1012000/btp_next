@@ -1,0 +1,6 @@
+applications:
+- name: btp1
+  path: btp_next
+  route: random
+  memory: 128M
+  buildpack: nodejs_buildpack
