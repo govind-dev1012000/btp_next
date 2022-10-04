@@ -1,19 +1,39 @@
 ID: nextappmta1
-_schema-version: "2.1"
-version: 0.0.1
+_schema-version: "3.2"
+version: 0.0.3
    
-build-parameters:
-  before-all:
-   - builder: custom
-     commands:
-      - npm install
-      - npm run build
+# build-parameters:
+#   before-all:
+#    - builder: custom
+#      commands:
+#       - npm install
+#       - npm run build
 
 
 modules:
-  - name: nextappmta1
-    path: .
-    type: nodejs
-    parameters:
-      memory: 256M
-      disk-quota: 512M
+  # - name: nextappmta1
+  #   path: .
+  #   type: nodejs
+  #   parameters:
+  #     memory: 256M
+  #     disk-quota: 512M
+  #     build-parameters:
+  #   build-result: dist
+  #   builder: custom
+  #   commands:
+  #   - npm install
+  #   - npm run build:cf
+  #   supported-platforms: []
+
+- name: nextappmta1
+  type: nodejs
+  path: .
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: ['CF']
+
+      
