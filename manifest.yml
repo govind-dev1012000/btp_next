@@ -1,0 +1,24 @@
+# ID: nextappmta10
+# _schema-version: "2.1"
+# version: 0.0.1
+   
+# build-parameters:
+#   before-all:
+#    - builder: custom
+#      commands:
+#       - npm install
+#       - npm run build
+
+
+# modules:
+#   - name: nextappmta10
+#     path: .
+#     type: nodejs
+#     parameters:
+#       memory: 256M
+#       disk-quota: 512M
+applications:
+- name: kupex_strapi
+  command: npm start
+  memory: 512M
+  buildpack: nodejs_buildpack
