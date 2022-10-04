@@ -1,5 +1,0 @@
-applications:
-- name: btp101010
-  route: random
-  memory: 128M
-  buildpack: nodejs_buildpack
