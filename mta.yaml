@@ -1,4 +1,4 @@
-ID: strapiapp1
+ID: nextapp1
 _schema-version: "2.1"
 version: 0.0.1
    
@@ -8,13 +8,12 @@ build-parameters:
      commands:
       - npm install
       - npm run build
-      - npm install --production
 
 
 modules:
-  - name: strapiapp1
+  - name: nextapp1
     path: .
     type: nodejs
     parameters:
-      memory: 1024MB
-      disk-quota: 1024MB
+      memory: 256M
+      disk-quota: 1024M
