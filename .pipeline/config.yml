@@ -46,9 +46,6 @@ steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
   cloudFoundryDeploy:
-<<<<<<< HEAD
-    mtaDeployParameters: "-f --version-rule ALL"
-=======
     mtaDeployParameters: "-f --version-rule ALL"
 
->>>>>>> 17bd499a8a590a1e2e7a6e729ec79af2f23ed6f5
+
