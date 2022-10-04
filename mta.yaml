@@ -1,5 +1,5 @@
-ID: strapiapp1
-_schema-version: "2.1"
+ID: nextapp1
+_schema-version: "3.0"
 version: 0.0.1
    
 build-parameters:
@@ -12,8 +12,8 @@ build-parameters:
 
 
 modules:
-  - name: strapiapp1
-    path: .
+  - name: nextapp1
+    path: ./btp_next
     type: nodejs
     parameters:
       memory: 1024MB
