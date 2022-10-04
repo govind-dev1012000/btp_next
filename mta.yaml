@@ -11,32 +11,32 @@ version: 0.0.1
 
 
 modules:
-  # - name: nextappmta1
-  #   path: .
-  #   type: nodejs
-  #   parameters:
-  #     memory: 256M
-  #     disk-quota: 512M
-  #     build-parameters:
-  #   build-result: dist
-  #   builder: custom
-  #   commands:
-  #   - npm install
-  #   - npm run build:cf
-  #   supported-platforms: []
+  - name: nextappmta1
+    path: .
+    type: nodejs
+    parameters:
+      memory: 256M
+      disk-quota: 512M
+    build-parameters:
+      build-result: dist
+      builder: custom
+      commands:
+      - npm install
+      - npm run build
+      supported-platforms: []
 
-- name: nextappmta1
-  type: nodejs
-  path: .
-  parameters:
-    memory: 256M
-    disk-quota: 512M
-  build-parameters:
-    build-result: dist
-    builder: custom
-    commands:
-    - npm install
-    - npm run build
-    supported-platforms: []
+# - name: nextappmta1
+#   type: nodejs
+#   path: .
+#   parameters:
+#     memory: 256M
+#     disk-quota: 512M
+#   build-parameters:
+#     build-result: dist
+#     builder: custom
+#     commands:
+#     - npm install
+#     - npm run build
+#     supported-platforms: []
 
       
