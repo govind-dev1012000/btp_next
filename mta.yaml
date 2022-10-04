@@ -1,5 +1,5 @@
-ID: nextapp101
-_schema-version: "3.0"
+ID: nextapp1
+_schema-version: "2.1"
 version: 0.0.1
    
 build-parameters:
@@ -8,10 +8,11 @@ build-parameters:
      commands:
       - npm install
       - npm run build
+      - npm install --production
 
 
 modules:
-  - name: nextapp101
+  - name: nextapp1
     path: .
     type: nodejs
     parameters:
