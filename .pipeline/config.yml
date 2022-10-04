@@ -22,13 +22,13 @@ stages:
   Additional Unit Tests:
     npmExecuteScripts: false
     karmaExecuteTests: false
-  Acceptance:
-    cloudFoundryDeploy: true
-    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "d19c1445trial"
-    cfSpace: "dev1"
-    cfCredentialsId: "auth"
-    npmExecuteEndToEndTests: true
+  # Acceptance:
+  #   cloudFoundryDeploy: true
+  #   cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+  #   cfOrg: "d19c1445trial"
+  #   cfSpace: "dev1"
+  #   cfCredentialsId: "auth"
+  #   npmExecuteEndToEndTests: true
   Compliance:
     sonarExecuteScan: false
   Release:
