@@ -16,4 +16,4 @@ modules:
     type: nodejs
     parameters:
       memory: 256M
-      disk-quota: 1024M
+      disk-quota: 512M
