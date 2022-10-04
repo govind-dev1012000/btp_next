@@ -10,9 +10,6 @@
 
 
 
-### General project setup
-general:
-  inferBuildTool: true
 
 ### Step-specific configuration
 steps:
@@ -22,20 +19,32 @@ steps:
   artifactPrepareVersion:
     versioningType: cloud_noTag
 
-### Stage-specific configuration
+---
+general:
+  buildTool: "npm"
+service:
+  buildToolVersion: "N14"
 stages:
-  'Confirm':
-    manualConfirmation: false
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: false
+  Additional Unit Tests:
+    npmExecuteScripts: false
+    karmaExecuteTests: false
+  Acceptance:
+    cloudFoundryDeploy: false
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
+    cfOrg: "d19c1445trial"
+    cfSpace: "dev1"
+    cfCredentialsId: "auth"
+    npmExecuteEndToEndTests: true
+  Compliance:
+    sonarExecuteScan: false
 
-#  Integration:
-#    credentials:
-#      - alias: 'mySystemAlias'
-#        credentialId: 'mySystemCredentialsId'
-
-Release:
-  cfTargets:
-    - org: 'd19c1445trial'
-      space: 'dev'
-      apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
-      manifest: './manifest.yml'
-      credentialsId: 'auth'
+  Release:
+    cfTargets:
+      - org: 'd19c1445trial'
+        space: 'dev'
+        apiEndpoint: 'https://api.cf.us10-001.hana.ondemand.com'
+        manifest: './manifest.yml'
+        credentialsId: 'auth'
