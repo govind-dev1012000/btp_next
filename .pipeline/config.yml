@@ -13,7 +13,7 @@
 general:
   buildTool: "mta"
 service:
-  buildToolVersion: "MBTJ11N14"
+  buildToolVersion: "MBTJ12N16"
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false
