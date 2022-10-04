@@ -1,5 +1,5 @@
-ID: nextappmta1
-_schema-version: "3.1"
+ID: nextappmta10
+_schema-version: "2.1"
 version: 0.0.1
    
 build-parameters:
@@ -11,7 +11,7 @@ build-parameters:
 
 
 modules:
-  - name: nextappmta1
+  - name: nextappmta10
     path: .
     type: nodejs
     parameters:
