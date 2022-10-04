@@ -28,7 +28,7 @@ stages:
     cfOrg: "d19c1445trial"
     cfSpace: "dev"
     cfCredentialsId: "auth"
-    npmExecuteEndToEndTests: false
+    npmExecuteEndToEndTests: true
   Compliance:
     sonarExecuteScan: false
   Release:
