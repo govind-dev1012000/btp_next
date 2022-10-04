@@ -1,4 +1,4 @@
-ID: nextapp1
+ID: nextapp101
 _schema-version: "3.0"
 version: 0.0.1
    
@@ -12,8 +12,8 @@ build-parameters:
 
 
 modules:
-  - name: nextapp1
-    path: ./btp_next
+  - name: nextapp101
+    path: .
     type: nodejs
     parameters:
       memory: 1024MB
