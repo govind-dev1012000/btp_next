@@ -1,30 +1,23 @@
 {
-  "name": "btp-next",
-  "private": true,
+  "name": "btp_next",
   "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "@strapi/strapi": "4.3.8",
-    "@strapi/plugin-users-permissions": "4.3.8",
-    "@strapi/plugin-i18n": "4.3.8",
-    "pg": "8.6.0"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "c2e42c53-8c9b-4dae-bb4c-61ca5828a2dd"
-  },
+  "private": true,
   "engines": {
-    "node": "14.x.x",
-    "npm": ">=6.0.0"
+    "node": "14.x.x"
   },
-  "license": "MIT"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1"
+  }
 }
