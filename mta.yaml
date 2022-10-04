@@ -8,6 +8,7 @@ build-parameters:
      commands:
       - npm install
       - npm run build
+      - npm install --production
 
 
 modules:
