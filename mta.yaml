@@ -1,4 +1,4 @@
-ID: nextapp1
+ID: nextapp101101
 _schema-version: "2.1"
 version: 0.0.1
    
@@ -11,9 +11,9 @@ build-parameters:
 
 
 modules:
-  - name: nextapp1
+  - name: nextapp101101
     path: .
     type: nodejs
     parameters:
-      memory: 1024MB
+      memory: 256MB
       disk-quota: 1024MB
