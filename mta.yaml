@@ -33,7 +33,7 @@ modules:
     builder: custom
     commands:
     - npm install
-    - npm run build:cf
-    supported-platforms: ['CF']
+    - npm run build
+    supported-platforms: []
 
       
