@@ -1,6 +1,6 @@
 ID: nextappmta1
 _schema-version: "3.2"
-version: 0.0.3
+version: 0.0.1
    
 # build-parameters:
 #   before-all:
@@ -28,6 +28,9 @@ modules:
 - name: nextappmta1
   type: nodejs
   path: .
+  parameters:
+    memory: 256M
+    disk-quota: 512M
   build-parameters:
     build-result: dist
     builder: custom
